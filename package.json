@@ -1,0 +1,13 @@
+{
+  "name": "ho-ho-holdem",
+  "version": "1.0.0",
+  "description": "Christmas party poker tournament with a reversed strip poker bluff rule",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo no tests in deploy bundle"
+  },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "private": true
+}
