@@ -9,6 +9,7 @@ const CONFIG = {
   levelMinutes: 5,        // blind level length (host can change live)
   actionSeconds: 20,      // decision clock (host can change live)
   lateRegLevels: 3,       // latecomers get a full stack during the first N levels
+  prizePool: 100,        // total prize money in euros for the main event (host can change live)
   payouts: [0.5, 0.3, 0.2],
   losers: { sb: 100, bb: 200, ante: 25, buyin: 10000 }, // Naughty List table: fixed blinds, unlimited rebuys
   // [small blind, big blind, ante] : designed to finish 15 players in roughly 70 to 80 minutes
@@ -32,7 +33,7 @@ function newState() {
   return {
     phase: 'lobby', paused: false, pausedAt: 0, players: {}, pidSeq: 0, tables: {}, tableSeq: 0,
     level: 0, levelEndsAt: 0, levelMinutes: CONFIG.levelMinutes, actionSeconds: CONFIG.actionSeconds,
-    prizePool: 0, feed: [], feedSeq: 0, handSeq: 0, finalTable: false, savedAt: 0,
+    prizePool: CONFIG.prizePool, feed: [], feedSeq: 0, handSeq: 0, finalTable: false, savedAt: 0,
   };
 }
 S = newState();
